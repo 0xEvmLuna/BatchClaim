@@ -15,7 +15,7 @@ contract GLDToken is ERC20 {
 
     function claim() public {
         require(totalSupply() + claim_nums <= MAX_SUPPLY);
-        require(!_claimed[msg.sender], "The accont had claimed token.");
+        require(!_claimed[msg.sender], "The account had claimed token.");
 
         // Checks-Effects-Interactions
         _claimed[msg.sender] = true;
